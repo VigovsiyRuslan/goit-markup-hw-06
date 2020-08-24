@@ -386,7 +386,17 @@
       <!-- Модалка -->
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button data-modal-close>x</button>
+          <form class="js-speaker-form">
+            <h2>Оставьте свои данные,мы вам перезвоним</h2>
+            <label for="name">Имя</label>
+            <input type="text" name="name" id="name" />
+            <label for="tel">Телефон</label>
+            <input type="tel" name="tel" id="tel" />
+            <label for="mail">Почта</label>
+            <input type="email" name="mail" id="mail" />
+            <button class="button">Отправить</button>
+          </form>
+          <button class="button-close" data-modal-close>x</button>
         </div>
       </div>
     </main>
