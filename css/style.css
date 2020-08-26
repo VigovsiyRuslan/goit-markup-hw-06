@@ -67,6 +67,10 @@ li {
 
 /* Шапка */
 
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
 .container-header {
   padding-left: 15px;
   padding-right: 15px;
@@ -161,11 +165,12 @@ li {
   content: "";
   position: absolute;
   left: 0;
-  top: 28px;
+  top: 45px;
 
   display: block;
   width: 100%;
   height: 4px;
+  border-radius: 2px;
   background-color: var(--accent-color);
 }
 
@@ -354,8 +359,6 @@ li {
 }
 .clients-company-link {
   color: #afb1b8;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-company-link:hover,
@@ -402,6 +405,7 @@ li {
   text-align: center;
   border: 0;
   border-radius: 4px;
+  cursor: pointer;
 
   color: var(--complementary-color);
   background-color: var(--accent-color);
@@ -494,9 +498,10 @@ li {
 
 .footer-container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 60px;
   padding-bottom: 60px;
-  align-items: center;
 }
 
 .footer-logo {
@@ -520,8 +525,20 @@ li {
 }
 
 .footer-box {
-  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 570px;
+}
+
+.textarea-footer {
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: #2f303a;
+  color: #c4c4c4;
 }
 
 .google-link {
@@ -595,6 +612,7 @@ li {
 }
 
 .filter-button {
+  cursor: pointer;
   color: var(--prymary-text-color);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -771,12 +789,132 @@ img {
 }
 
 .button-close {
+  cursor: pointer;
   position: absolute;
   right: 10px;
   top: 10px;
+  background-color: #ffffff;
+  border: 1px solid rgba(00, 00, 00, 10%);
+  border-radius: 30px;
 }
 
-.js-speaker-form {
-  display: inline-flex;
+textarea {
+  resize: none;
+  width: auto;
+  outline: 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 16px 12px;
+
+  border-radius: 4px;
+}
+
+textarea:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.form {
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-field {
+  position: relative;
+  display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.name-svg {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 19px;
+  fill: #212121;
+}
+
+.form-input {
+  outline: 0;
+  margin: 0;
+  padding: 12px 11px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  text-align: left;
+}
+
+.form-input:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.form-input:focus + .name-svg {
+  fill: var(--accent-color);
+}
+
+.form-field label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+
+  letter-spacing: 0.01em;
+
+  color: #757575;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.comment-box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.comment-lable {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+
+  letter-spacing: 0.01em;
+
+  color: #757575;
+  margin-bottom: 10px;
+}
+
+.group {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+
+  color: #757575;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.group input[type="checkbox"] {
+  width: 16px;
+  height: 15px;
+}
+
+.agreement-conditions {
+  color: var(--accent-color);
+}
+
+.close-svg {
+  width: 11px;
+  height: 11px;
+  color: #fff;
+  fill: #000000;
+}
+
+.close-svg:focus,
+.close-svg:hover {
+  fill: var(--accent-color);
 }

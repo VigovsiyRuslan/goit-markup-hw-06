@@ -318,7 +318,7 @@
                 </li>
               </ul>
             </li>
-          </ul>
+          </ul>          
         </div>
       </section>
       <!--Постоянные клиенты-->
@@ -386,17 +386,60 @@
       <!-- Модалка -->
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <form class="js-speaker-form">
+          <form class="form js-speaker-form">
             <h2>Оставьте свои данные,мы вам перезвоним</h2>
-            <label for="name">Имя</label>
-            <input type="text" name="name" id="name" />
-            <label for="tel">Телефон</label>
-            <input type="tel" name="tel" id="tel" />
-            <label for="mail">Почта</label>
-            <input type="email" name="mail" id="mail" />
+            <div class="form-field">
+              <label for="name" class="form-lable">Имя</label>
+              <input type="text" class="form-input" name="name" id="name" />
+              <svg class="name-svg" width="18" height="18"></svg>
+              <use href="../images/svg/sprite.svg#icon-name"></use>
+              </svg>
+              
+              
+              
+            </div>
+            <div class="form-field">
+              <label for="tel" class="form-lable">Телефон</label>
+              <input type="tel" class="form-input" name="tel" id="tel" />
+              <svg class="name-svg" width="18" height="18"></svg>
+                <use href="../images/svg/sprite.svg#icon-form-telephone"></use>
+              </svg>
+            </div>
+            <div class="form-field">
+              <label for="mail" class="form-lable">Почта</label>
+              <input type="email" class="form-input" name="mail" id="mail" />
+            </div>
+            <div class="comment-box">
+              <label class="comment-lable" for="comment">Коментарий</label>
+              <textarea
+                name="comment"
+                id="comment"
+                rows="10"
+                placeholder="Введите текст"
+              ></textarea>
+            </div>
+            <div role="group" class="group">
+              <input
+                type="checkbox"
+                name="contract"
+                value="contract"
+                id="contract"
+              />
+              <label for="contract"
+                >Соглашаюсь с рассылкой и принимаю
+                <a class="agreement-conditions" href=""
+                  >Условия договора</a
+                ></label
+              >
+            </div>
+
             <button class="button">Отправить</button>
           </form>
-          <button class="button-close" data-modal-close>x</button>
+          <button class="button-close" data-modal-close>
+            <svg class="close-svg">
+              <use href="./images/svg/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </main>
@@ -458,9 +501,18 @@
           </ul>
         </div>
         <div class="footer-box">
-          <b class="caption-b">Подпишитесь на рассылку</b>
+          <div class="textarea-box">
+            <b class="caption-b">Подпишитесь на рассылку</b>
+            <textarea
+              class="textarea-footer"
+              name="textarea-footer"
+              id="textarea-footer"
+              rows="1"
+              placeholder="E-mail"
+            ></textarea>
+          </div>
           <button type="button" class="button">Подписаться</button>
-        </div>
+        </div>       
       </div>
     </footer>
     <script src="./js/modal.js"></script>
