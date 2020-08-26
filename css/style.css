@@ -832,6 +832,7 @@ textarea:focus {
   top: 50%;
   left: 19px;
   fill: #212121;
+  background-color: #2196f3;
 }
 
 .form-input {
